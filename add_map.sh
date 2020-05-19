@@ -41,5 +41,5 @@ cmd="sed 's/^. maps$/$selectcode/' $cfgpath"
 echo "$MAPPER - $MAPNAME - $STARSSTR"
 echo "$cmd"
 eval "$cmd" > tmp.cfg
-mv tmp.cfg "$cfgpath"
+cp tmp.cfg "$cfgpath"
 

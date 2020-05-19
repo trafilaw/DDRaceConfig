@@ -12,14 +12,14 @@ STARS="$1"
 MAPPER="$(urldecode "$2")"
 MAPNAME="$(urldecode "$3")"
 TYPE="$4"
-STARS="$((STARS+1))"
+echo "stars $STARS"
 cfgpath="$TYPE.cfg"
 s1='★'
 s2='✰'
 STARSSTR=''
-for((i=5;i>0;i--))
+for((i=0;i<5;i++))
 do
-    if [ "$i" -gt "$STARS" ]
+    if [ "$i" -lt "$STARS" ]
     then
         STARSSTR+="$s1"
     else

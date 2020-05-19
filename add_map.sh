@@ -43,6 +43,3 @@ echo "$cmd"
 eval "$cmd" > tmp.cfg
 cp tmp.cfg "$cfgpath"
 
-git add .
-git commit -m "Add $MAPNAME by $MAPPER"
-

@@ -6,6 +6,8 @@ then
     exit 1
 fi
 
+chown www-data:www-data *.cfg
+
 function urldecode() { : "${*//+/ }"; echo -e "${_//%/\\x}"; }
 
 STARS="$1"
@@ -42,4 +44,3 @@ echo "$MAPPER - $MAPNAME - $STARSSTR"
 echo "$cmd"
 eval "$cmd" > tmp.cfg
 cp tmp.cfg "$cfgpath"
-

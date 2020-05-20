@@ -35,7 +35,7 @@ fi
 
 dos2unix "$cfgpath"
 read -rd '' selectcode << EOF
-\\x23 maps\\nadd_vote "$MAPNAME by $MAPPER | $STARSSTR |" change_map "$MAPNAME"
+\\x23 maps\\nadd_vote "Map: $MAPNAME by $MAPPER | $STARSSTR |" change_map "$MAPNAME"
 EOF
 cmd="sed 's/^. maps$/$selectcode/' $cfgpath"
 echo "$MAPPER - $MAPNAME - $STARSSTR"
